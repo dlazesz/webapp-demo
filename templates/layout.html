@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="hu">
+    <head>
+        <title>{{ title }}</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        {% if messages %}
+        <ul class=flashes>
+        {% for message in messages %}
+            <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+        <form action="" method="get">
+            <label for="check" title="Negatív szűrés">NOT</label>
+            <input type="checkbox"  id="check" name="check" value="check">
+            <input list="list_elem" id="list_elem2" name="list_elem2" value="" size="20">
+                <datalist id="list_elem">
+                    <option value="agyon">agyon</option>
+                    <option value="alul">alul</option>
+                    <option value="alá">alá</option>
+                    <option value="alább">alább</option>
+                    <option value=" " readonly="true">82 további találat nem került megjelenítésre</option>
+                </datalist>
+            <br>
+            <input type="submit" value="Küldés">
+            <input type="reset" value="Visszaállítás">
+        </form>
+    </body>
+</html>
